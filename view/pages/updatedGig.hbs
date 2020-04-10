@@ -1,0 +1,43 @@
+<section id="add" class="container">
+  <div class="form-wrap">
+    <h1>Update A Gig</h1>
+    <p>Your contact email will be shared with registered users to apply to your gig</p>
+    {{#each errors}}
+    <div class="error">
+      <p>{{text}}</p>
+    </div>
+    {{/each}}
+    <form action="/gigs/update" method="POST">
+      <div class="form-group">
+        <label for="title">Gig Id</label>
+        <input type="text" name="id" id="title" class="form-control"
+          placeholder="eg. Small Wordpress website, React developer" maxlength="100" value={{title}}>
+      </div>
+      <div class="form-group">
+        <label for="title">Gig Title</label>
+        <input type="text" name="title" id="title" class="form-control"
+          placeholder="eg. Small Wordpress website, React developer" maxlength="100" value={{title}}>
+      </div>
+      <div class="form-group">
+        <label for="technologies">Technologies Needed</label>
+        <input type="text" name="technologies" id="technologies" class="form-control"
+          placeholder="eg. javascript, react, PHP" maxlength="100" value={{technologies}}>
+      </div>
+      <div class="form-group">
+        <label for="budget">Budget (Leave blank for unknown)</label>
+        <input type="number" name="budget" id="budget" class="form-control" placeholder="eg. 500, 5000, 10000">
+      </div>
+      <div class="form-group">
+        <label for="description">Gig Description</label>
+        <textarea name="description" id="description" class="form-control" placeholder="Describe the details of the gig"
+          rows="5">{{description}}</textarea>
+      </div>
+      <div class="form-group">
+        <label for="budget">Contact Email</label>
+        <input type="email" name="contact_email" id="contactemail" class="form-control" placeholder="Enter an email"
+          value={{contact_email}}>
+      </div>
+      <input type="submit" value="Update Gig" class="btn btn-reverse btn-success btn-lg btn-block">
+    </form>
+  </div>
+</section>

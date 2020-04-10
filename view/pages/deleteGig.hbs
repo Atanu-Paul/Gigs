@@ -1,0 +1,18 @@
+<section id="add" class="container">
+  <div class="form-wrap">
+    <h1>Delete A Gig</h1>
+    {{#each errors}}
+    <div class="error">
+      <p>{{text}}</p>
+    </div>
+    {{/each}}
+    <form action="/gigs/delete" method="POST">
+      <div class="form-group">
+        <label for="title">Gig Id</label>
+        <input type="text" name="id" id="title" class="form-control"
+          placeholder="eg. Small Wordpress website, React developer" maxlength="100">
+      </div>
+      <input type="submit" value="Delete Gig" class="btn btn-reverse">
+    </form>
+  </div>
+</section>

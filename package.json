@@ -20,7 +20,7 @@
   "author": "Atanu Paul",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.17.1",
+    "express": "^4.17.3",
     "hbs": "^4.1.1",
     "pg": "^8.0.0",
     "pg-hstore": "^2.3.3",
